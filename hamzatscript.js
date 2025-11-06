@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 // --- Highlight active nav link while scrolling ---
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
@@ -32,13 +31,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
-// --- Live character counter for textarea (contact page only) ---
+// --- Live character counter for textarea ---
 const textarea = document.getElementById("comments");
 
 if (textarea) {
   const counter = document.createElement("p");
-  counter.style.color = "#00eaff";
+  counter.style.color = "#ffb84d";
   counter.style.fontSize = "14px";
   counter.textContent = "0 / 300 characters";
 
@@ -49,7 +47,6 @@ if (textarea) {
     counter.textContent = `${len} / 300 characters`;
   });
 }
-
 
 // --- Submit button ripple effect ---
 document.querySelectorAll("button").forEach(button => {
@@ -67,3 +64,28 @@ document.querySelectorAll("button").forEach(button => {
     setTimeout(() => ripple.remove(), 600);
   });
 });
+
+
+// ✅✅✅ --- FORM SUBMISSION WITH AJAX (Formspree, no redirect) ---
+const form = document.getElementById("contactForm");
+
+if (form) {
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent redirect
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      alert("✅ Your message has been sent!");
+      form.reset();
+    } else {
+      alert("❌ Something went wrong. Try again later.");
+    }
+  });
+}
