@@ -66,26 +66,36 @@ document.querySelectorAll("button").forEach(button => {
 });
 
 
-// ✅✅✅ --- FORM SUBMISSION WITH AJAX (Formspree, no redirect) ---
+// ✅✅✅ --- FORM SUBMISSION WITH JSON (Formspree, no redirect) ---
 const form = document.getElementById("contactForm");
 
 if (form) {
   form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent redirect
+    event.preventDefault(); // Stop page reload/redirect
 
-    const formData = new FormData(form);
+    // Build JSON object for Formspree
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("comments").value
+    };
 
-    const response = await fetch(form.action, {
+    // Send JSON request to Formspree
+    const response = await fetch("https://formspree.io/f/mzzknwzr", {
       method: "POST",
-      body: formData,
-      headers: { "Accept": "application/json" }
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(data)
     });
 
     if (response.ok) {
       alert("✅ Your message has been sent!");
-      form.reset();
+      form.reset(); // Clear inputs
     } else {
-      alert("❌ Something went wrong. Try again later.");
+      alert("❌ There was an error sending your message.");
     }
   });
 }
+
