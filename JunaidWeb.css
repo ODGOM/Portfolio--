@@ -1,0 +1,161 @@
+/* ---------- HEADER ---------- */
+.top {
+  background-color: #1a0f0a; /* deep brown-black */
+  border: 2px solid #ff7b00; /* warm orange border */
+  box-shadow: 0 2px 8px #ff7b00; /* orange glow */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Navigation links */
+.top nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top nav a {
+  color: #ffb84d; /* soft orange */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.top nav a:hover {
+  text-shadow: 0 0 10px #ffb84d;
+  color: #ffd580; /* light orange */
+}
+
+.active-link {
+  text-shadow: 0 0 12px #ffd580;
+  color: #ffd580;
+}
+
+
+/* ---------- BODY ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #2b1a12; /* dark brown */
+  border: 2px solid #ff7b00;
+  border-radius: 5px;
+  color: #ffb84d;
+}
+
+
+/* ---------- TEXT ---------- */
+p {
+  color: #ffb84d;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  color: #ff8c1a; 
+  font-size: 22px;
+  text-shadow: 0 0 6px rgba(255, 140, 26, 0.3);
+}
+
+
+/* ---------- SECTIONS ---------- */
+section {
+  color: #ffb84d;
+  border: 2px solid #ff7b00;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(255, 140, 26, 0.35);
+  padding: 10px;
+  margin: 20px 0;
+}
+
+section:target {
+  background-color: #3b2418;
+  box-shadow: 0 0 12px #ff7b00;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+
+/* ---------- FORM FIELDSET ---------- */
+.forms {
+  border: 2px solid #ff7b00;
+  border-radius: 8px;
+  padding: 20px;
+  background: #1a0f0a;
+  box-shadow: 0 0 10px #ff7b00;
+  color: #ffb84d;
+}
+
+.forms legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff8c1a;
+}
+
+
+/* ---------- FORM INPUTS ---------- */
+.forms input,
+.forms textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ff7b00;
+  border-radius: 5px;
+  background: #2b1a12;
+  color: #ffb84d;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.forms input:focus,
+.forms textarea:focus {
+  outline: none;
+  border-color: #ff8c1a;
+  box-shadow: 0 0 8px #ff8c1a;
+}
+
+
+/* ---------- BUTTON ---------- */
+.forms button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7b00;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.forms button:hover {
+  background: #ffd580;
+  color: black;
+  box-shadow: 0 0 10px #ffb84d;
+}
+
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  background: rgba(255,255,255,0.7);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleAnimation 0.6s linear;
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
