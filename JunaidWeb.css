@@ -73,10 +73,10 @@ section {
 
 section:hover {
   background-color: #3b2418;
-  box-shadow: 0 0 12px #ff7b00;
+  box-shadow: 0 2px 8px #ff7b00;
   transition: 0.3s ease;
   border-radius: 5px;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 
@@ -159,4 +159,5 @@ section:hover {
     opacity: 0;
   }
 }
+
 
