@@ -71,12 +71,12 @@ section {
   margin: 20px 0;
 }
 
-section:target {
+section:hover {
   background-color: #3b2418;
   box-shadow: 0 0 12px #ff7b00;
   transition: 0.3s ease;
   border-radius: 5px;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 
@@ -159,3 +159,4 @@ section:target {
     opacity: 0;
   }
 }
+
