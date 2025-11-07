@@ -76,7 +76,7 @@ section:hover {
   box-shadow: 0 2px 8px #ff7b00;
   transition: 0.3s ease;
   border-radius: 5px;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 
@@ -159,5 +159,6 @@ section:hover {
     opacity: 0;
   }
 }
+
 
 
