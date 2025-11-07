@@ -17,7 +17,9 @@
 
     <main>
         <p>If you'd like to get in touch, please fill out the contact form below:</p>
-        <form action="https://formspree.io/f/mzzknwzr" method="POST" enctype="text/plain">
+
+        <!-- ✅ FIXED FORM -->
+        <form id="contactForm">
             <fieldset class="forms">
                 <legend>Contact Box</legend>
 
@@ -28,7 +30,7 @@
                 <input type="email" id="email" name="email" required><br>
 
                 <label for="comments">Message:</label><br>
-                <textarea cols="30" rows="10" id="comments" name="comments"></textarea><br>
+                <textarea cols="30" rows="10" id="comments" name="message"></textarea><br>
 
                 <button type="submit">Submit</button>
             </fieldset>
