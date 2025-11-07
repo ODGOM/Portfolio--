@@ -26,5 +26,4 @@ This website serves as my digital portfolio, designed to introduce who I am, dis
 | **Email Integration** | Formspree API |
 | **Version Control** | Git & GitHub |
 
-Visit:
-[🌐 hamzatweb.com](https://chatgpt.com/g/g-p-68e6e749052c8191bd6d80afe90726b7-website-1/c/690a9146-efbc-832c-82e7-46af4f9e07dc#:~:text=Hamzat%20Odunayo%20Junaid%0A%F0%9F%93%8D%20Toronto%2C%20ON%0A%F0%9F%8C%90%20hamzatweb.com)
+
